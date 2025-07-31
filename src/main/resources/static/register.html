@@ -1,0 +1,41 @@
+<!--
+ * ISchedule
+ * front end for the register page
+ *
+ * Author:      Samuel Ulz
+ * Last Change: 24.04.2025
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script src="js/register.js" defer></script>
+</head>
+<body>
+    <form id="registerForm">
+        <h2>Register new user</h2>
+        <label for="regUsername">Username</label>
+        <input type="text" id="regUsername" name="username" placeholder="Username" required><br>
+        <label for="regEmail">E-Mail</label>
+        <input type="email" id="regEmail" name="email" placeholder="E-Mail" required><br>
+        <label for="regPassword">Password</label>
+        <input type="password" id="regPassword" name="password" placeholder="Password" required><br>
+        <label for="regPassword2">repeat Password</label>
+        <input type="password" id="regPassword2" name="password2" placeholder="Password" required><br>
+        <label for="regRole">Select role</label>
+        <select id="regRole">
+            <option value="0">Student</option>
+            <option value="1">Assistant</option>
+            <option value="2">Administrator</option>
+        </select><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <p>
+        Already have an account?<br>
+        <a href="index.html">Login</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!--
+ * ISchedule
+ * front end for the admin page
+ *
+ * Author:      Samuel Ulz
+ * Last Change: 24.04.2025
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <script src="js/app.js"></script>
+    <script src="js/admin.js" defer></script>
+    <script src="js/preference.js" defer></script>
+</head>
+<body onload="load()">
+  <h1 id="greeting"></h1>
+
+  <h2>Add a new Room</h2>
+  <form id="room-form">
+    <label for="room_name">Room</label>
+    <input id="room_name" placeholder="Room name" required><br>
+    <label for="room_capacity">Capacity</label>
+    <input id="room_capacity" placeholder="Room capacity" required><br>
+    <button type="submit">Add Room</button>
+  </form>
+  <br>
+
+  <h2>Add a new Course</h2>
+  <form id="course-form">
+      <label for="course_name">Course</label>
+      <input id="course_name" placeholder="Course name" required><br>
+      <label for="course-date">Date</label>
+      <input id="course-date" placeholder="YYYY-MM-DD" required><br>
+      <label for="course-start-time">Start Time</label>
+      <input id="course-start-time" placeholder="00:00" required onchange="checkTime(value)"><br>
+      <label for="course-end-time">End Time</label>
+      <input id="course-end-time" placeholder="00:00" required onchange="checkTime(value)"><br>
+      <label for="course-room_id">Room</label>
+      <select id="course-room_id" required>
+          <option value="0">Select room</option>
+      </select><br>
+      <button type="submit">Add Course</button>
+  </form>
+  <br>
+
+  <h2>Add a new Preference</h2>
+  <form id="preference-form">
+      <label for="course_id">Course</label>
+      <select id="course_id" required>
+          <option value="0">Select course</option>
+      </select><br>
+      <label for="start-time">Start Time</label>
+      <input id="start-time" placeholder="00:00" onchange="checkTime(value)"><br>
+      <label for="end-time">End Time</label>
+      <input id="end-time" placeholder="00:00" onchange="checkTime(value)"><br>
+      <label for="room_id">Room</label>
+      <select id="room_id">
+          <option value="0">Select room</option>
+      </select><br>
+      <label for="reason">Reason</label>
+      <input id="reason" placeholder="Reason"><br>
+      <button type="submit">Add Preference</button>
+  </form>
+
+  <p>
+      <a href="index.html">log out</a>
+  </p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/*
+ * ISchedule
+ * Style sheet for the timetable page.
+ *
+ * Author:      Samuel Ulz
+ * Last Change: 24.04.2025
+ */
+
+th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100px;
+    height: 50px;
+}
+
+td.time {
+    text-align: center;
+    width: 50px;
+    background-color: lightgray;
+}
+
+th {
+    background-color: lightgray;
+}
+
+#emptyth {
+    background-color: white;
+    border: none;
+}

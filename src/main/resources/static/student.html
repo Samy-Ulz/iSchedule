@@ -1,0 +1,169 @@
+<!--
+ * ISchedule
+ * front end for the student page
+ *
+ * Author:      Samuel Ulz
+ * Last Change: 24.04.2025
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+    <script src="js/student.js" defer></script>
+    <link rel="stylesheet" href="css/timetable.css">
+</head>
+<body onload="load()">
+    <h1 id="greeting"></h1>
+
+    <h2>My weekly schedule</h2>
+    <table class="timetable">
+        <thead>
+        <tr>
+            <th id="emptyth"></th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="time">7:00</td>
+            <td id="Mon-7"></td>
+            <td id="Tue-7"></td>
+            <td id="Wed-7"></td>
+            <td id="Thu-7"></td>
+            <td id="Fri-7"></td>
+        </tr>
+        <tr>
+            <td class="time">8:00</td>
+            <td id="Mon-8"></td>
+            <td id="Tue-8"></td>
+            <td id="Wed-8"></td>
+            <td id="Thu-8"></td>
+            <td id="Fri-8"></td>
+        </tr>
+        <tr>
+            <td class="time">9:00</td>
+            <td id="Mon-9"></td>
+            <td id="Tue-9"></td>
+            <td id="Wed-9"></td>
+            <td id="Thu-9"></td>
+            <td id="Fri-9"></td>
+        </tr>
+        <tr>
+            <td class="time">10:00</td>
+            <td id="Mon-10"></td>
+            <td id="Tue-10"></td>
+            <td id="Wed-10"></td>
+            <td id="Thu-10"></td>
+            <td id="Fri-10"></td>
+        </tr>
+        <tr>
+            <td class="time">11:00</td>
+            <td id="Mon-11"></td>
+            <td id="Tue-11"></td>
+            <td id="Wed-11"></td>
+            <td id="Thu-11"></td>
+            <td id="Fri-11"></td>
+        </tr>
+        <tr>
+            <td class="time">12:00</td>
+            <td id="Mon-12"></td>
+            <td id="Tue-12"></td>
+            <td id="Wed-12"></td>
+            <td id="Thu-12"></td>
+            <td id="Fri-12"></td>
+        </tr>
+        <tr>
+            <td class="time">13:00</td>
+            <td id="Mon-13"></td>
+            <td id="Tue-13"></td>
+            <td id="Wed-13"></td>
+            <td id="Thu-13"></td>
+            <td id="Fri-13"></td>
+        </tr>
+        <tr>
+            <td class="time">14:00</td>
+            <td id="Mon-14"></td>
+            <td id="Tue-14"></td>
+            <td id="Wed-14"></td>
+            <td id="Thu-14"></td>
+            <td id="Fri-14"></td>
+        </tr>
+        <tr>
+            <td class="time">15:00</td>
+            <td id="Mon-15"></td>
+            <td id="Tue-15"></td>
+            <td id="Wed-15"></td>
+            <td id="Thu-15"></td>
+            <td id="Fri-15"></td>
+        </tr>
+        <tr>
+            <td class="time">16:00</td>
+            <td id="Mon-16"></td>
+            <td id="Tue-16"></td>
+            <td id="Wed-16"></td>
+            <td id="Thu-16"></td>
+            <td id="Fri-16"></td>
+        </tr>
+        <tr>
+            <td class="time">17:00</td>
+            <td id="Mon-17"></td>
+            <td id="Tue-17"></td>
+            <td id="Wed-17"></td>
+            <td id="Thu-17"></td>
+            <td id="Fri-17"></td>
+        </tr>
+        <tr>
+            <td class="time">18:00</td>
+            <td id="Mon-18"></td>
+            <td id="Tue-18"></td>
+            <td id="Wed-18"></td>
+            <td id="Thu-18"></td>
+            <td id="Fri-18"></td>
+        </tr>
+        <tr>
+            <td class="time">19:00</td>
+            <td id="Mon-19"></td>
+            <td id="Tue-19"></td>
+            <td id="Wed-19"></td>
+            <td id="Thu-19"></td>
+            <td id="Fri-19"></td>
+        </tr>
+        <tr>
+            <td class="time">20:00</td>
+            <td id="Mon-20"></td>
+            <td id="Tue-20"></td>
+            <td id="Wed-20"></td>
+            <td id="Thu-20"></td>
+            <td id="Fri-20"></td>
+        </tr>
+        <tr>
+            <td class="time">21:00</td>
+            <td id="Mon-21"></td>
+            <td id="Tue-21"></td>
+            <td id="Wed-21"></td>
+            <td id="Thu-21"></td>
+            <td id="Fri-21"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Enroll in course</h2>
+    <form id="enroll-form">
+        <label for="course_id">Course</label>
+        <select id="course_id" required>
+            <option value="0">Select course</option>
+        </select><br>
+        <button type="submit">Enroll</button>
+    </form>
+
+    <p>
+        <a href="index.html">log out</a>
+    </p>
+</body>
+</html>
