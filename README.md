@@ -26,4 +26,5 @@ Administrators can add new rooms and both admins and assistants can add new cour
 ## Notes
 
 The preferences feature is not fully implemented yet, you can add preferences to the DB, but they won't be taken into account.
+
 This project was part of a university coding course and is intended for academic demonstration purposes only.
