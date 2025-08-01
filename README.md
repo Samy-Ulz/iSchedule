@@ -9,12 +9,17 @@ Administrators can add new rooms and both admins and assistants can add new cour
 
 1. Clone the Repository
 2. Set Up the Database
-   - Import the ISchedule.sql into your MySQL server.
+   - Import ISchedule.sql into your MySQL server.
    - Adjust application.properties to use your local DB credentials.
 3. Build & Run the Project
-   - ```bash
-     ./mvnw spring-boot:run
-     ```
+   - Unix/MacOS/Linux:
+     - ```bash
+       ./mvnw spring-boot:run
+       ```
+   - Windows:
+     - ```bash
+       mvnw.cmd spring-boot:run
+       ```
 4. Access the web app
    - Open your browser and go to: http://localhost:8080
 
