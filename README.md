@@ -27,4 +27,6 @@ Administrators can add new rooms and both admins and assistants can add new cour
 
 The preferences feature is not fully implemented yet, you can add preferences to the DB, but they won't be taken into account.
 
+The timetable only shows the current week, so to test it, you have to add new courses in the current week.
+
 This project was part of a university coding course and is intended for academic demonstration purposes only.
