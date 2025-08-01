@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 24, 2025 at 11:50 PM
+-- Generation Time: Aug 01, 2025 at 02:03 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -41,9 +41,11 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`id`, `end`, `start`, `title`, `room_id`, `date`) VALUES
-(10, '10:00:00.000000', '08:00:00.000000', 'c1', 2, '2004-12-16'),
-(11, '19:00:00.000000', '17:00:00.000000', 'course2', 3, '2025-04-25'),
-(12, '18:00:00.000000', '17:00:00.000000', 'course3', 2, '2025-04-24');
+(15, '14:00:00.000000', '10:00:00.000000', 'c1', 2, '2025-04-29'),
+(17, '15:00:00.000000', '10:00:00.000000', 'c2', 3, '2025-07-30'),
+(18, '13:00:00.000000', '10:00:00.000000', 'c4', 2, '2025-08-01'),
+(19, '18:30:00.000000', '15:00:00.000000', 'c5', 3, '2025-08-01'),
+(20, '14:00:00.000000', '10:00:00.000000', 'c3', 2, '2025-07-31');
 
 -- --------------------------------------------------------
 
@@ -61,9 +63,11 @@ CREATE TABLE `enrollments` (
 --
 
 INSERT INTO `enrollments` (`student_id`, `course_id`) VALUES
-(1, 10),
-(1, 11),
-(1, 12);
+(1, 15),
+(1, 17),
+(1, 18),
+(1, 19),
+(1, 20);
 
 -- --------------------------------------------------------
 
@@ -86,7 +90,7 @@ CREATE TABLE `preference` (
 --
 
 INSERT INTO `preference` (`id`, `end`, `start`, `course_id`, `room_id`, `user_id`, `reason`) VALUES
-(1, NULL, NULL, 10, 2, 3, '');
+(4, '16:00:00.000000', '10:00:00.000000', 15, 3, 2, 'AOAEFN');
 
 -- --------------------------------------------------------
 
@@ -105,8 +109,8 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`id`, `capacity`, `name`) VALUES
-(2, 0, 'room1'),
-(3, 0, 'room2');
+(2, 10, 'room1'),
+(3, 15, 'room2');
 
 -- --------------------------------------------------------
 
@@ -129,7 +133,9 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `email`, `name`, `password`, `role`) VALUES
 (1, 'test@test.com', 'test', 'test', 0),
 (2, 'admin@test.com', 'admin', 'test', 2),
-(3, 'assist@ass.com', 'assist', 'assist', 1);
+(3, 'assist@ass.com', 'assist', 'assist', 1),
+(4, 'samy@ulz.com', 'samy', 'miri', 2),
+(5, 'assistant@test.com', 'assistant', 'test', 1);
 
 --
 -- Indexes for dumped tables
@@ -178,25 +184,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `preference`
 --
 ALTER TABLE `preference`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
